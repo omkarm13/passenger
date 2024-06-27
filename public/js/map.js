@@ -33,7 +33,7 @@ if (locMap && locMap.length) {
             const results = await maptilersdk.geocoding.forward(locMap);
             map.getSource('search-results').setData(results);
             if (results.features[0]) {
-                map.fitBounds(results.features[0].bbox, { maxZoom: 9 });
+                map.fitBounds(results.features[0].bbox, { maxZoom: 8 });
 
                 var popup = new maptilersdk.Popup({ offset: 25 }).setText(
                     'Exact Location will be provided after booking.'
